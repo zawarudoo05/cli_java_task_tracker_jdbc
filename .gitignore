@@ -1,0 +1,13 @@
+# Maven build output
+target/
+
+# Sensitive environment variables
+.env
+
+# Editor-specific files (NVIM/Vim)
+*.swp
+*.swo
+undo/
+
+# OS-specific
+.DS_Store
