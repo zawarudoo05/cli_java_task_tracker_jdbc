@@ -18,15 +18,12 @@ public class Task {
         this.updatedAt = createdAt;
     }
 
-    public Task(int id, String description) {
+    public Task(int id, String status, String description, String createdAt, String updatedAt) {
         this.id = id;
-        this.status = Status.TODO;
+        this.status = Status.valueOf(status);
         this.description = description;
-        this.createdAt = LocalDateTime.now().toString();
-        this.updatedAt = createdAt;
-    }
-
-    public Task() {
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public static int getId_counter() {
@@ -65,9 +62,9 @@ public class Task {
         return createdAt;
     }
 
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
+    // public void setCreatedAt(String createdAt) {
+    // this.createdAt = createdAt;
+    // }
 
     public String getUpdatedAt() {
         return updatedAt;

@@ -23,8 +23,11 @@ public class MysqlRepo implements Repo {
             // looping throught the resultSet, and stocking each record in a new task object
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
+                String status = resultSet.getString("status");
                 String description = resultSet.getString("description");
-                task_list.add(new Task(id, description));
+                String createdAt = resultSet.getString("createdAt");
+                String updatedAt = resultSet.getString("updatedAt");
+                task_list.add(new Task(id, status, description, createdAt, updatedAt));
 
             }
         }
